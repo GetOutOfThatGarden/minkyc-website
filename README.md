@@ -2,7 +2,8 @@
 
 The official marketing website for **MinKYC** — a privacy-preserving KYC solution built on Solana.
 
-**Live Site:** https://deeppink-wolverine-734172.hostingersite.com  
+**Live Site (Hostinger):** https://deeppink-wolverine-734172.hostingersite.com  
+**GitHub Pages:** https://getoutofthatgarden.github.io/minkyc-website/  
 **Project:** https://colosseum.com/agent-hackathon/projects/minkyc-e5qc5l  
 **Source Code:** https://github.com/GetOutOfThatGarden/MinKYC
 
@@ -102,10 +103,32 @@ If you need to update the website:
 
 ---
 
+## GitHub Pages (Alternative Preview)
+
+You can also view this website via **GitHub Pages**:
+
+**URL:** https://getoutofthatgarden.github.io/minkyc-website/
+
+### Enabling GitHub Pages
+
+To enable GitHub Pages for this repository:
+
+1. Go to **Settings** → **Pages** in this GitHub repo
+2. Under **Source**, select **Deploy from a branch**
+3. Select **main** branch and **/ (root)** folder
+4. Click **Save**
+5. Wait 1-2 minutes for the site to be available at the URL above
+
+**Note:** GitHub Pages is useful for previewing, but the primary production site is hosted on Hostinger for better performance and custom domain support.
+
+---
+
 ## Related Links
 
 | Resource | URL |
 |----------|-----|
+| **Live Site (Hostinger)** | https://deeppink-wolverine-734172.hostingersite.com |
+| **GitHub Pages** | https://getoutofthatgarden.github.io/minkyc-website/ |
 | **Main Project Repo** | https://github.com/GetOutOfThatGarden/MinKYC |
 | **Colosseum Hackathon** | https://colosseum.com/agent-hackathon/projects/minkyc-e5qc5l |
 | **Demo Video** | https://www.loom.com/share/9dced184732f48e0b754a2ad7c822687 |
