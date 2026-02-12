@@ -2,7 +2,6 @@
 
 The official marketing website for **MinKYC** — a privacy-preserving KYC solution built on Solana.
 
-**Live Site (Hostinger):** https://deeppink-wolverine-734172.hostingersite.com  
 **GitHub Pages:** https://getoutofthatgarden.github.io/minkyc-website/  
 **Project:** https://colosseum.com/agent-hackathon/projects/minkyc-e5qc5l  
 **Source Code:** https://github.com/GetOutOfThatGarden/MinKYC
