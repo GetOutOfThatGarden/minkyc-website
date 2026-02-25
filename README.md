@@ -1,180 +1,78 @@
-# MinKYC Website
+MinKYC — Privacy-Preserving KYC on Solana
 
-The official marketing website for **MinKYC** — a privacy-preserving KYC solution built on Solana.
+⚠️ READ-ONLY REPOSITORY ⚠️
+Do not make manual commits to this repository. This repository is an automated deployment window. It is automatically updated and maintained by the MinKYC OSINT Bot pipeline. Any manual changes made here will be overwritten.
 
-**GitHub Pages:** https://getoutofthatgarden.github.io/minkyc-website/  
-**Project:** https://colosseum.com/agent-hackathon/projects/minkyc-e5qc5l  
-**Source Code:** https://github.com/GetOutOfThatGarden/MinKYC
+Production Website: https://getoutofthatgarden.github.io/minkyc-website/
 
----
+Main Project Source Code: https://github.com/GetOutOfThatGarden/MinKYC
 
-## About MinKYC
+About MinKYC
 
 MinKYC enables platforms to verify users meet regulatory requirements (age, residency, etc.) without storing sensitive identity data. This eliminates GDPR liability, reduces breach risk, and maintains full audit compliance.
 
-### Key Benefits
-- ✅ **No identity data stored** — Only cryptographic commitments touch the blockchain
-- ✅ **GDPR compliant by design** — No honeypot of passport scans or ID documents
-- ✅ **Immutable audit trail** — Every verification creates an on-chain receipt
-- ✅ **Three-role workflow** — User, Platform, and Regulator each have distinct responsibilities
+The Automated OSINT Blog
 
----
+In addition to the main marketing site, this domain hosts the MinKYC Intelligence Feed. An autonomous AI agent monitors global news for centralized KYC data breaches, generates intelligence reports, and publishes them directly to this website under /breaches/[company_slug].html.
 
-## Tech Stack
+Architecture & DevOps Stack
 
-- **Framework:** React + TypeScript + Vite
-- **Styling:** Tailwind CSS v3
-- **Build Output:** Static HTML/CSS/JS
-- **Hosting:** Hostinger Website Plan
-- **Deployment:** GitHub → Hostinger auto-deploy
+This repository serves as the public-facing display for a decoupled, modern CI/CD architecture:
 
----
+Frontend Framework: React + TypeScript + Vite
 
-## Project Structure
+Styling: Tailwind CSS v3
 
-```
-/
-├── index.html          # Main HTML entry point
-├── assets/             # Bundled CSS and JS files
-│   ├── index-*.css     # Tailwind styles
-│   └── index-*.js      # React application bundle
-├── vite.svg            # Favicon
-└── README.md           # This file
-```
+Hosting: GitHub Pages
 
----
+CMS / Deployment Engine: Python + GitHub Actions + Gemini 2.5 AI
 
-## Development
+How Updates Work
 
-### Local Development
+The raw React source code lives in the MinKYC repository.
 
-```bash
-# Clone the main MinKYC repo for source code
-git clone https://github.com/GetOutOfThatGarden/MinKYC.git
-cd MinKYC/minkyc-website
+The compiled assets and HTML template are stored in a private automation repository (kyc-breach-bot).
 
-# Install dependencies
-npm install
+When the AI agent detects a KYC breach, it generates a new HTML report, wraps it in the MinKYC UI template, and uses an SSH Deploy Key to push the entire website directly to this repository.
 
-# Run dev server
-npm run dev
+GitHub Pages detects the push and instantly updates the live website.
 
-# Build for production
-npm run build
-```
+Related Links
 
-### Building from Source
+Resource
 
-The source code for this website is in the main MinKYC repository:
-- **Source:** `/minkyc-website/` in the main repo
-- **Build output:** `dist/` folder (this is what gets deployed)
+URL
 
----
+Live Site
 
-## Deployment
+https://getoutofthatgarden.github.io/minkyc-website/
 
-This repository contains the **built static files** (not the source). Deployment is handled automatically by Hostinger.
+Main Project Repo
 
-### Manual Update Process
+https://github.com/GetOutOfThatGarden/MinKYC
 
-If you need to update the website:
+Colosseum Hackathon
 
-1. Build the site from the main MinKYC repo:
-   ```bash
-   cd /path/to/MinKYC/minkyc-website
-   npm run build
-   ```
+https://colosseum.com/agent-hackathon/projects/minkyc-e5qc5l
 
-2. Copy the new `dist/` contents to this repo:
-   ```bash
-   cp -r /path/to/MinKYC/minkyc-website/dist/* /path/to/minkyc-website/
-   ```
+Demo Video
 
-3. Commit and push:
-   ```bash
-   cd /path/to/minkyc-website
-   git add -A
-   git commit -m "Update website - [date/description]"
-   git push origin main
-   ```
+https://www.loom.com/share/9dced184732f48e0b754a2ad7c822687
 
-4. Hostinger will auto-deploy from GitHub
+Smart Contract
 
----
+Explorer Link
 
-## GitHub Pages (Alternative Preview)
+Twitter/X Agent
 
-You can also view this website via **GitHub Pages**:
+@NH32WEB
 
-**URL:** https://getoutofthatgarden.github.io/minkyc-website/
+License & Contact
 
-### Enabling GitHub Pages
+License: MIT License — See main MinKYC repository for details.
 
-To enable GitHub Pages for this repository:
+Creator: @NH32WEB
 
-1. Go to **Settings** → **Pages** in this GitHub repo
-2. Under **Source**, select **Deploy from a branch**
-3. Select **main** branch and **/ (root)** folder
-4. Click **Save**
-5. Wait 1-2 minutes for the site to be available at the URL above
+Project Issues: GitHub Issues Tracker
 
-**Note:** GitHub Pages is useful for previewing, but the primary production site is hosted on Hostinger for better performance and custom domain support.
-
----
-
-## Related Links
-
-| Resource | URL |
-|----------|-----|
-| **Live Site (Hostinger)** | https://deeppink-wolverine-734172.hostingersite.com |
-| **GitHub Pages** | https://getoutofthatgarden.github.io/minkyc-website/ |
-| **Main Project Repo** | https://github.com/GetOutOfThatGarden/MinKYC |
-| **Colosseum Hackathon** | https://colosseum.com/agent-hackathon/projects/minkyc-e5qc5l |
-| **Demo Video** | https://www.loom.com/share/9dced184732f48e0b754a2ad7c822687 |
-| **Smart Contract** | https://explorer.solana.com/address/9zzT4KdUh7TEtiR8ioTMhDLWDa4c6ymzAjQsYYfvc3h1?cluster=devnet |
-| **Twitter/X** | https://twitter.com/NH32WEB |
-
----
-
-## Architecture Overview
-
-```
-┌─────────┐    ┌──────────┐    ┌──────────┐
-│  USER   │───→│ PLATFORM │───→│  SOLANA  │
-│ (local) │    │ (verify) │    │ (receipt)│
-└─────────┘    └──────────┘    └──────────┘
-     │                │                │
-     ▼                ▼                ▼
-Creates identity   Verifies      Immutable
-+ commitment       proofs        audit trail
-```
-
-1. **User** creates identity locally (passport scan never leaves device)
-2. **Platform** requests verification (e.g., "is this user over 18?")
-3. **Solana** records the verification receipt on-chain
-
----
-
-## Colosseum Agent Hackathon
-
-This project was built for the **Colosseum Agent Hackathon** by:
-- **Agent:** Bella-MinKYC-v2
-- **Creator:** @NH32WEB
-- **Status:** Submitted
-
----
-
-## License
-
-MIT License — See main MinKYC repository for details.
-
----
-
-## Contact
-
-- **Twitter:** @NH32WEB
-- **Project Issues:** https://github.com/GetOutOfThatGarden/MinKYC/issues
-
----
-
-*Built with React, Tailwind CSS, and deployed on Hostinger.*
+Built with React, Tailwind CSS, and managed by AI.
